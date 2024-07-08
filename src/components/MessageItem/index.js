@@ -4,7 +4,7 @@ const MessageItem = (props) => {
   const { msgDetails, isNightModeOn } = props;
   const { sender, message } = msgDetails;
   const { name } = sender;
-  console.log(msgDetails);
+  console.log(name)
   return (
     <li className="chat-msg-list-item">
       <div className="msg-constaiener">

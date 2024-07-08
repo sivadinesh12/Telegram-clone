@@ -105,7 +105,6 @@ class LandingPage extends Component {
       }
       return name && name.toLowerCase().includes(searchInput.toLowerCase());
     });
-    console.log(filteredChats);
     return (
       <div className="bg-container">
         <div
