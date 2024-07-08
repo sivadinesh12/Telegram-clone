@@ -1,70 +1,76 @@
-# Getting Started with Create React App
+# Telegram clone 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a web application for chat management and messaging, developed using React. It features a search functionality to filter chats, night mode toggle, and message viewing capabilities.
 
-## Available Scripts
+# Features
+    
+Chat Listing: View a list of available chats.
 
-In the project directory, you can run:
+Chat Filtering: Search and filter chats based on the chat creator's name.
 
-### `npm start`
+Night Mode: Toggle between night mode and light mode.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Message Viewing: View messages within a selected chat.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Escape Key Handling: Close the active chat tab by pressing the Escape key.
 
-### `npm test`
+#Technologies Used
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+React: Frontend library
+FontAwesome: Icons
+ReactJS Popup: Popup library
 
-### `npm run build`
+# Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Prerequisites
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Node.js
+npm (Node Package Manager)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Installation
 
-### `npm run eject`
+Clone the repository:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+git clone https://github.com/your-username/beyondchats-web-app.git
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+cd tele-clone
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# Install the dependencies:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+npm install
 
-## Learn More
+# Running the App
+To start the development server, run:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+npm start
+This will start the application on http://localhost:3000.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Building the App
+To build the app for production, run:
 
-### Code Splitting
+npm run build
+This will create a build directory with the production build of the app.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# Code Structure
 
-### Analyzing the Bundle Size
+src/components/ChatItem.js: Component for rendering individual chat items.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+src/components/MessageItem.js: Component for rendering individual messages.
 
-### Making a Progressive Web App
+src/components/LandingPage.js: Main component containing the chat list, search input, and message viewing area.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+src/index.css: Styles for the application.
 
-### Advanced Configuration
+# API Endpoints
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+https://devapi.beyondchats.com/api/get_all_chats?page=1: Fetches all chats.
 
-### Deployment
+https://devapi.beyondchats.com/api/get_chat_messages?chat_id=<id>: Fetches messages for a specific chat.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+# Key Functions
 
-### `npm run build` fails to minify
+getChats(): Fetches all chats from the API and sets the state.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+getChatById(id): Fetches messages for a specific chat and sets the state.
+
+handleSearchInput(event): Updates the search input value in the state.
